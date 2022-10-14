@@ -20,10 +20,12 @@ menu ul li {
     margin-right: 20px;
     font-size: 2em;
 }
-
 .logo img {
     height: 75px;
     margin-top: 10px;
+}
+.page {
+    margin-left: 16px;
 }
 h1 {
     font-size: 4em;
@@ -42,12 +44,10 @@ p {
     left: 350px;
     max-width: 900px;
 }
-
 a {
     text-decoration: none;
     color: black;
 }
-
 a:hover {
     color: blue;
 }
