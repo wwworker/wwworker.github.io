@@ -37,6 +37,10 @@ blockquote {
   color: red;
   font-weight: bold;
 }
+.tech {
+  color: green;
+  font-weight: bold;
+}
 nav ul li {display: inline-block;}
 nav a {
   display: block;
