@@ -1,0 +1,22 @@
+header {
+    display: flex;
+ }
+ eader img {
+    margin: 30px;
+ }
+    body {
+        background-image: url("Ballet pink hearts on bone background.jpg");
+        background-size: cover;
+    }
+        h1 {
+            font-size: 3em;
+            color: rgb(102, 55, 80);
+        } 
+        h3 {
+      font-size: 1em;
+      color: rgb(102, 55, 80);
+  } 
+         .zagalovok {
+            text-align:center;
+         } 
+ 
