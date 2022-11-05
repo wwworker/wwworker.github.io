@@ -7,12 +7,13 @@
     <title>Как сделать сырники</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;427&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;427&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: navajowhite;
             font-family: 'Oswald', sans-serif;
+            margin: 0;
         }
         h1 {
             font-size: 5em;
@@ -25,6 +26,7 @@
         }
         main {
             margin: 0 auto;
+            margin-top: 130px;
             padding: 30px;
             width: 35%;
             border: 6px solid rgb(180, 133, 46);
@@ -33,15 +35,47 @@
         .absolute {
             position: fixed;
             top: 0px;
-            width: 1920px;
+            width: 98.8%;
             height: 100px;
+            padding: 0 10px;
+            border: 2px solid black ;
             background-color: white;
         }
+        .absolute_content {
+            margin: 0 auto;
+            width: 45%;
+            display: flex;
+        }
+        ul {
+        list-style: none;
+    }
+    .absolute_content ul li > ul {
+        display:none;
+    }
+    .absolute_content ul li:hover > ul {
+        display:inherit;
+        background-color: rgb(255, 186, 58);
+        padding: 5px;
+    }
+    .absolute_content ul li:hover > ul li a:visited {
+        color: rgb(150, 65, 0);
+    }
     </style>
 </head>
 <body>
     <div class="absolute">
+        <div class="absolute_content">
         <h3>Вкусные рецепты</h3>
+        <ul>
+        <a href="Index1.html">Меню</a>
+        <li>Рецепты
+            <ul>
+                <li><a href="B.html">Блинчики</a></li>
+                <li><a href="C.html">Сырники</a></li>
+            </ul>
+        </li>
+    </ul>
+    </div>
     </div>
     <main>
 
@@ -115,7 +149,7 @@
 <h2>Другие рецепты</h2>
 <br>
 <br>
-<a href="%D0%91%D0%BB%D0%B8%D0%BD%D1%87%D0%B8%D0%BA%D0%B8.html">Как сделать блинчики</a>
+<a href="B.html">Как сделать блинчики</a>
 </main>
 </body>
 </html>
