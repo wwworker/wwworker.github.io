@@ -1,0 +1,21 @@
+body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+header {
+    background-image: url("../Без имеЕЕЕЕЕЕЕЕЕЕЕЕЕни.png");
+}
+.header_content, main {
+    width: 80%;
+    margin: 0 auto;
+}
+.block {
+    display: flex;
+    justify-content: space-between;
+}
+.right p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
