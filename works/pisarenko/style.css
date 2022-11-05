@@ -1,0 +1,19 @@
+p.big{
+    font-size: 1.5em;
+}
+header, main {
+    width: 70%;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    font-size: 1.6em;
+}
+.menu li {
+    margin-right: 20px;
+}
