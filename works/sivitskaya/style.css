@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'PT Sans', sans-serif;
 }
 header {
     width: 100%;
@@ -21,8 +22,6 @@ header {
 .menu ul li {
     margin-right: 20px;
 }
-
-
 .layout {
     min-width: 600px;
 }
@@ -44,17 +43,46 @@ main {
     padding: 0;
     margin: 0;
 }
+.pict {
+    position: absolute;
+    left: 1800px;
+    padding: 0;
+    margin: 0;
+}
 a {
     font-size: 1.4em;
     text-decoration: none;
     color: black;
 }
-
 footer {
     min-height: 400px;
 }
-
 footer ul {
     list-style: none;
+}
+/* .fotoramka {
+    padding: 0px;
+    border-radius: 6px;
+    border: 3px solid grey;
+    transform: rotate(15deg);
+} */
+.block {
 
+        display: flex;
+
+}
+.right {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: -0.019em;
+    text-align: left;
+}
+
+/*.left {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: -0.022em;
+    text-align: left;
 }
