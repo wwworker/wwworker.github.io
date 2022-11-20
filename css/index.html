@@ -20,14 +20,14 @@
 <p>В современной версии стандарта HTML5 практически все оформление страницы делается при помощи <b>каскадных листов стилей</b>,
   <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank" rel="noopener noreferrer">CSS</a>.
   Команда CSS состоит из селектора и соответствующих ему свойств:<br>
-  <img src="../css.png" alt="Иллюстрация из Большая книга CSS3. Д. Макфарлард." style="margin: 20px">
+  <img src="../css.png" alt="Иллюстрация из Большая книга CSS3. Д. Макфарлард." style="margin: 20px"></p>
 <ul>
   <li>Все относящиеся к селектору свойства записываются в фигурных скобках</li>
   <li>Описания свойств разделяются точкой с запятой. <b>Не поставил «;» между свойствами – получил ошибку</b></li>
   <li>Свойства и их значения разделяются двоеточием</li>
   <li>Вокруг селекторов, свойств, их значений можно ставить любое количество пробелов, знаков табуляции и переносов строки</li>
 </ul>
-</p>
+
 <h2>Способы использования CSS в HTML</h2>
 <ol>
   <li>внешние стили, подключаются тегом &lt;link&gt; в голове документа, т.е. <b>внутри</b> тега &lt;head&gt;:
@@ -72,9 +72,30 @@
 <p>Свойства селектора будут применены ко всем выбранным элементам (тегам) на странице.</p>
 <p>Ниже для удобства свойства разбиты на несколько категорий.</p>
 
-<h2 id="default">Стили по умолчанию</h2>
+<h2 id="default">Стили по умолчанию и User-Agent-Stylesheet</h2>
 <p>У Web-страницы без стилевого файла есть оформление: элементы имеют отступы, используются шрифты с определенными параметрами и так далее. Например, ссылки &ndash; синие и подчеркнуты. Это браузерные <i>стили по умолчанию</i>, они определены в стандарте CSS <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%81%D0%BE%D1%80%D1%86%D0%B8%D1%83%D0%BC_%D0%92%D1%81%D0%B5%D0%BC%D0%B8%D1%80%D0%BD%D0%BE%D0%B9_%D0%BF%D0%B0%D1%83%D1%82%D0%B8%D0%BD%D1%8B" target="_blank" rel="noopener noreferrer">консорциумом W3C</a>.</p>
-<p><b><a href="https://www.w3schools.com/cssref/css_default_values.asp" target="_blank" rel="noopener noreferrer">Алфавитный список элементов HTML и их стилей по умолчанию</a></b>.</p>
+<ul>
+<li>Стандарты. Стили по умолчанию для <a href="https://www.w3.org/TR/CSS21/sample.html" target="_blank" rel="noopener noreferrer">CSS 2.1</a>,
+  <a href="https://www.w3.org/TR/CSS22/sample.html" target="_blank" rel="noopener noreferrer">CSS 2.2</a>,
+  <a href="https://html.spec.whatwg.org/multipage/rendering.html" target="_blank" rel="noopener noreferrer">CSS 3</a></li>
+<li>Значения по умолчанию в разных браузерах. <a href="https://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements" target="_blank" rel="noopener noreferrer">Browsers' default CSS for HTML elements</a> (Stack Overflow).
+  <a href="https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css" target="_blank" rel="noopener noreferrer">Chrome (Blink)</a>;
+  <a href="https://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css" target="_blank" rel="noopener noreferrer">Chrome/Safari (WebKit)</a>;
+  <a href="https://searchfox.org/mozilla-central/source/layout/style/res/html.css" target="_blank" rel="noopener noreferrer">Firefox (Gecko</a>), можно просмотреть через
+  <a href="resource://gre-resources/" target="_blank" rel="noopener noreferrer">resource://gre-resources</a>
+  и найти html.css</li>
+<li><a href="https://github.com/sw4/revert.css" target="_blank" rel="noopener noreferrer">revert.css</a>.
+  Restore Browser/Spec default CSS styles. Also includes the default CSS styles</li>
+<li><b><a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener noreferrer">Normalize.css</a></b>
+  заставляет браузеры отображать все элементы более последовательно и в соответствии с современными стандартами.</li>
+<li><b><a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank" rel="noopener noreferrer">Reset CSS</a></b></li>
+<li><a href="https://elad.medium.com/how-does-css-work-92fe7116916d" target="_blank" rel="noopener noreferrer">How Does CSS Work?</a>
+  <a href="https://elad.medium.com/normalize-css-or-css-reset-9d75175c5d1e" target="_blank" rel="noopener noreferrer">Normalize CSS or CSS Reset?!</a>
+  <a href="https://elad.medium.com/understanding-the-initial-inherit-and-unset-css-keywords-2d70b7121695" target="_blank" rel="noopener noreferrer">Understanding the “Initial”, “Inherit” and “Unset” CSS Keywords</a></li>
+<li><a href="https://meiert.com/en/blog/user-agent-style-sheets/" target="_blank" rel="noopener noreferrer">User Agent Style Sheets: Basics and Samples</a></li>
+<li><a href="https://www.w3schools.com/cssref/css_default_values.asp" target="_blank" rel="noopener noreferrer">Алфавитный список элементов HTML и их стилей по умолчанию</a>.</li>
+</ul>
+
 
 <h2>Все свойства CSS</h2>
   <p><a href="https://www.web4college.com/css-play/" target="_blank" rel="noopener noreferrer">Список 300+ CSS-свойств</a>,
