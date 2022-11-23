@@ -1,5 +1,8 @@
+body {
+    margin: 0;
+}
 p.big{
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 header, main {
     width: 70%;
@@ -16,4 +19,13 @@ header {
 }
 .menu li {
     margin-right: 20px;
+}
+footer {
+    background-color: rgba(207, 138, 138, 0.925);
+    height: 250px;
+}
+.footer_content {
+    width: 70%;
+    margin: auto;
+    color: white;
 }
