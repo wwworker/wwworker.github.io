@@ -3,7 +3,7 @@ function createInputs() {
     var inputs = document.getElementById("inputs");
     for (i=0; i<k; i++) {
         var inpt = document.createElement("input");
-        inpt.value = i;
+        inpt.value = 5;
         inputs.appendChild(inpt);
     }
 }
@@ -17,6 +17,7 @@ function calc() {
         sum += parseInt(item.value);
     }
     var avg = sum/inputs.length;
-    console.log("Средний балл", avg);
-    document.getElementById('result').innerHTML = avg;
+    console.log("Средний балл", Math.round(avg));
+    document.getElementById('result').innerHTML = Math.round(avg*100)/100;
+    document.getElementById('res').innerHTML = Math.round(avg);
 }

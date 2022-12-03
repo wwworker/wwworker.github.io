@@ -9,13 +9,14 @@
 </head>
 <body>
     <h1>Калькулятор ср балла</h1>
-        <input type="text" id="number">
+        <input type="text" id="number" value="3">
         <button onclick="createInputs()">Создать поля ввода</button>
     <h2>Поля ввода:</h2>
 
     <div id="inputs"></div><br>
-    <button onclick="calc()">Посчитать</button>
-    <h2>Результат: <span id="result"></span></h2>
+    <button onclick="calc()">Посчитать среднее</button>
+    <h2>Среднее значение: <span id="result"></span></h2>
+    <h2>Округляем до целого (оптимистично): <span id="res"></span></h2>
 
 </body>
 </html>
