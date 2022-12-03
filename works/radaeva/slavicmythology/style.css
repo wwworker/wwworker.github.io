@@ -1,0 +1,38 @@
+header {
+    display: flex;
+}
+header h1 {
+    margin: 30px;
+}
+body {
+    background-image: url("фон.png");
+    background-size: cover;
+}
+h1 {
+    font-size: 3em;
+    color: rgb(75, 31, 10);
+}
+h2 {
+    font-size: 2em;
+    color: rgb(75, 31, 10);
+}
+.img {
+    text-align: center;
+}
+.block {
+    width: 90%;
+    background-color: rgba(155, 132, 99, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+}
+.block_content {
+    min-width: 500px;
+    width: 60%;
+    background-color: rgba(253, 230, 219, 0.7);
+    margin: 30px;
+    padding: 20px;
+}
+.img {
+    margin: 20px;
+    padding: 10px;
+}
