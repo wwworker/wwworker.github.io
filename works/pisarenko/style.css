@@ -3,6 +3,7 @@ body {
 }
 p.big{
     font-size: 1.7em;
+    margin: 10px 0;
 }
 header, main {
     width: 70%;
@@ -21,11 +22,12 @@ header {
     margin-right: 20px;
 }
 footer {
-    background-color: rgba(207, 138, 138, 0.925);
+    background-color: rgb(238, 136, 136);
     height: 250px;
 }
 .footer_content {
     width: 70%;
     margin: auto;
-    color: white;
+    padding-top: 10px;
+    color: rgb(229, 230, 219);
 }
