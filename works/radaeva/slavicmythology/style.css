@@ -20,7 +20,7 @@ h2 {
     text-align: center;
 }
 .block {
-    width: 90%;
+    width: 76%;
     background-color: rgba(155, 132, 99, 0.5);
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +32,38 @@ h2 {
     margin: 30px;
     padding: 20px;
 }
+header ul {
+    min-width: 100px;
+    /* width: 60%; */
+    background-color: rgba(253, 230, 219, 0.7);
+    margin: 30px;
+    padding: 20px;
+    padding-left: 35px;
+
+}
 .img {
     margin: 20px;
     padding: 10px;
 }
+.wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 0;
+  }
+  .column {
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid rgba(253, 230, 219, 0);
+    background-color:rgba(253, 230, 219, 0.7);
+    padding: 5px;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+  .right {width: 200px;}
+  .left {
+    margin-right: 20px;
+    padding-left: 5px;
+    width: calc(100% - 200px);
+  }
