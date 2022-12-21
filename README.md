@@ -4,8 +4,8 @@ Web design works and educational pages.
 [Веб-дизайн на gvard.github.io](https://gvard.github.io/web/), [Веб-разработка на gvard.github.io](https://gvard.github.io/dev/)
 
 ## Кружки Web-дизайн
-* [Работы](works/)
-* [Задания м работа над проектами. Возможные темы для сайта](task/)
+* **[Работы](works/)**
+* [Задания и работа над проектами. Возможные темы для сайта](task/)
 
 ## Справка
 * [Как работать и что нужно для web-дизайна](tools/)
