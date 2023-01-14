@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript: пример добавления новых элементов на страницу</title>
+  <script>
+    function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    function changeTopic() {
+      strokes = document.getElementById("strokes");
+      a = getRandomInt(1, 99)
+      strokes.innerHTML += `
+      <img src="https://randomuser.me/api/portraits/men/${a}.jpg" alt="">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod sint aspernatur, exercitationem maxime necessitatibus, assumenda iure dolor voluptas eveniet et, mollitia amet. Voluptatem, sapiente cumque! Modi neque iure nihil tempore!</p>`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Великий JavaScript, создай нам элементы</h1>
+  <div id="strokes"></div>
+  <button onclick="changeTopic()">Сменить тему</button>
+  <!-- <script>
+    strokes = document.getElementById("strokes");
+    console.log(strokes.innerHTML);
+    strokes.innerHTML = `<b>Сочинение на вольную тему</b>`;
+    console.log(strokes.innerHTML);
+  </script> -->
+</body>
+</html>
