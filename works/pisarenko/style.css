@@ -31,9 +31,12 @@ footer {
     padding-top: 10px;
     color: rgb(229, 230, 219);
 }
+#gar {
+    position: relative;
+}
 main #gar #blue {
     position: absolute;
     width: 200px;
-    left: 385px;
-    top: 5098px;
+    left: 98px;
+    top: 65px;
 }
