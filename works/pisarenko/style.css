@@ -5,7 +5,11 @@ p.big {
   font-size: 1.8em;
   margin: 10px 0;
 }
-header, main {
+header {
+  width: 70%;
+  margin: 0 auto;
+}
+main {
   width: 70%;
   margin: 0 auto;
 }
