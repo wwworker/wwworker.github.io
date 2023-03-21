@@ -15,20 +15,20 @@ main {
 }
 header {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 h1 {
   font-size: 1.7em;
 }
 header h1 {
-    min-width: 150px;
+  min-width: 170px;
 }
 header ul.menu {
-    min-width: 400px;
+  min-width: 400px;
 }
 header ul.anchors {
-    max-width: 295px;
+  max-width: 295px;
 }
 .menu {
   display: flex;
@@ -61,3 +61,40 @@ main #gar #blue {
   text-decoration: underline;
 }
 iframe {border: 0;}
+
+#subli {
+  min-width: 190px;
+}
+.topmenu > li {
+  display: inline-block;
+  /* margin-right: 20px; */
+  position: relative;
+}
+.topmenu > li:last-child {
+  margin-right: 0;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  /* left: 0; */
+  width: 100%;
+  z-index: 10;
+  font-size: 15px;
+  list-style: none;
+  display: none;
+  background: #00AF64;
+}
+.submenu {
+  padding-left: 6px;
+  padding-bottom: 10px;
+  /* margin-left: 0; */
+}
+.submenu a {
+  color: rgb(31, 83, 115);
+}
+.submenu a:visited {
+  color: rgb(94, 31, 101);
+}
+.topmenu  li:hover .submenu {
+  display: block;
+}
