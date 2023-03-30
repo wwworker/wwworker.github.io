@@ -1,15 +1,15 @@
 body {
   margin: 0;
+  background-color: rgb(104, 230, 165);
 }
 p.big {
-  font-size: 1.8em;
+  font-size: 1.7em;
   margin: 10px 0;
 }
-header {
-  width: 70%;
-  margin: 0 auto;
+p {
+  color: rgba(9, 127, 231, 0.995);
 }
-main {
+header, main {
   width: 70%;
   margin: 0 auto;
 }
@@ -20,9 +20,11 @@ header {
 }
 h1 {
   font-size: 1.7em;
+  color: rgb(40, 118, 182);
 }
 header h1 {
   min-width: 170px;
+  font-size: 2.5em;
 }
 header ul.menu {
   min-width: 400px;
@@ -30,10 +32,16 @@ header ul.menu {
 header ul.anchors {
   max-width: 295px;
 }
+.header {
+  background-color: rgba(54, 198, 174, 0.891);
+}
+ul li {
+  font-size: 1.5em;
+}
 .menu {
   display: flex;
   list-style: none;
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 .menu li {
   margin-right: 20px;
@@ -83,8 +91,6 @@ iframe {border: 0;}
   list-style: none;
   display: none;
   background: #00AF64;
-}
-.submenu {
   padding-left: 6px;
   padding-bottom: 10px;
   /* margin-left: 0; */
@@ -95,6 +101,6 @@ iframe {border: 0;}
 .submenu a:visited {
   color: rgb(94, 31, 101);
 }
-.topmenu  li:hover .submenu {
+.topmenu li:hover .submenu {
   display: block;
 }
