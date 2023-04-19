@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=" https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://alexbruni.ru/checkmouse/style/general.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    
+<!-- Yandex.RTB -->
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>  
+</head>
+<body>
+    
+	
+	
+<div class="container"> 
+		
+		
+		
+		
+		
+		
+		</div>
+	
+	
+
+    <main role="main container" class="pt-4">
+	<ul>
+        <li><a href="../index.html">Котики</a></li>
+        <li><a href="../games/index.html">Roblox Studio</a></li>
+        <li><a href="../videopad/index.html">Video Pad</a></li>
+        <li><a href="index.html">Clicker капибара</a></li>
+    </ul>
+		
+		
+		
+
+  <div  class="container">
+
+	  
+	
+		
+<div class="row" >
+	  <div class="col-auto"><img src="kapibara.png" style=" width: 300px; height: auto;"/></div>    
+      <a href="https://www.youtube.com/watch?v=IW8W8Xil1PE" target="_blank" rel="noopener noreferrer">песня про капибару</a>               
+	 <div class="col">
+	
+	
+		<small> Нажимайте чтобы получить мандарин для копибары.</small>
+	
+	
+	
+	</div>
+	  
+	  </div>
+	  
+	  
+	  
+	  <div class="row mt-1" style="color: #f3f0f0;">
+	  <div class="col-12 col-sm-5">
+		  
+		  
+		  
+		  <div class="testbox_new shadow col-auto p-5 " id="test">  <p class="unselectable">Кликайте тут</p></div>
+		  
+		  
+		  
+		 
+		  
+		  
+		  
+		   </div>
+		  
+		  
+		  
+		  
+		  
+	 <div class="col-12 col-sm-7 mt-4 mt-sm-0" style="color: #000000;">
+	
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		
+		 <h5>Кликов левой кнопкой мыши — <span id="cl_lkm">0</span></h5>
+		 Дабл кликов: <span id="Dbl_cl_lkm">0</span><br>
+		 Тайм-аут: <span id="cl_lkm_timeout">0</span> 
+		 
+		 
+	    <h5 class="mt-2">Кликов правой кнопкой мыши — <span id="cl_pkm">0</span></h5>
+		  Дабл кликов: <span id="Dbl_cl_pkm">0</span><br>
+		 Тайм-аут: <span id="cl_pkm_timeout">0</span> 
+		
+		 
+		 
+		 <div class="mt-2 mb-2">
+		 <strong>Всех кликов</strong>: <span id="cl_all">0</span> <span class="ml-3 mr-3">тайм-аут: <span id="cl_all_timeout">0</span></span> дабл кликов: <span id="Dbl_cl_all">0</span>
+		 </div>
+		 
+		 Таймер с первого клика: <span id="timer">0 сек</span>
+		 
+	
+	    <script language="javascript">
+$("body").on("contextmenu", false);
+			 
+			 
+			 
+			 
+oneclick = "1";		 
+	
+var PreviousDownTimeX = 0;
+			 var PreviousDownTimeX2 = 0;
+			 
+$("#test").mousedown(function() {
+	
+	
+// lkm
+ if(event.button == 0){
+	
+var cl_lkm = parseInt($('#cl_lkm').text());
+ cl_lkm++; $('#cl_lkm').text(cl_lkm);
+
+
+if (!PreviousDownTimeX) PreviousDownTimeX = new Date ().getTime (); else
+   {
+   var CurrentDownTimeX = new Date ().getTime ();
+	 
+	var ms = (CurrentDownTimeX - PreviousDownTimeX);
+	$('#cl_lkm_timeout').text(ms + ' мс');
+	 $('#console').val($.trim('Левая кнопка мыши: ' + ms +' мс\n' + $('#console').val()));
+	   
+if(ms < $("#sit_timeout").val()){
+var Dbl_cl_lkm = parseInt($('#Dbl_cl_lkm').text());
+ Dbl_cl_lkm++; $('#Dbl_cl_lkm').text(Dbl_cl_lkm);
+	
+	 $('#console').val($.trim('Пойман 2-й клик на ЛКМ: ' + Dbl_cl_lkm +' раз(а)\n' + $('#console').val()));
+	
+
+	$("#Dbl_cl_lkm").attr('class', 'upd_anim2');
+	setTimeout(function(){$("#Dbl_cl_lkm").attr('class', 'upd_anim1');}, 300);
+	
+	   }
+	
+	   
+   PreviousDownTimeX = CurrentDownTimeX;
+   }
+	 
+ }
+	
+	
+	
+// pkm
+ if(event.button == 2){
+	
+var cl_pkm = parseInt($('#cl_pkm').text());
+ cl_pkm++; $('#cl_pkm').text(cl_pkm);
+
+
+if (!PreviousDownTimeX) PreviousDownTimeX = new Date ().getTime (); else
+   {
+   var CurrentDownTimeX = new Date ().getTime ();
+	  
+	var ms_2 = (CurrentDownTimeX - PreviousDownTimeX);
+	$('#cl_pkm_timeout').text(ms_2 + ' мс');
+	   
+	   $('#console').val($.trim('Правая кнопка мыши: ' + ms_2 +' мс\n' + $('#console').val()));
+	   
+	   
+	 if(ms_2 < $("#sit_timeout").val()){
+var Dbl_cl_pkm = parseInt($('#Dbl_cl_pkm').text());
+ Dbl_cl_pkm++; $('#Dbl_cl_pkm').text(Dbl_cl_pkm);
+		 $('#console').val($.trim('Пойман 2-й клик на ПКМ: ' + Dbl_cl_pkm +' раз(а)\n' + $('#console').val()));
+		 
+		 	$("#Dbl_cl_pkm").attr('class', 'upd_anim2');
+	setTimeout(function(){$("#Dbl_cl_pkm").attr('class', 'upd_anim1');}, 300);
+		 
+		 
+	   }
+	   
+	   
+   PreviousDownTimeX = CurrentDownTimeX;
+   }
+	 
+ }	
+	
+	
+
+// all
+var cl_all = parseInt($('#cl_all').text());
+ cl_all++; $('#cl_all').text(cl_all);	
+	
+	
+if (!PreviousDownTimeX2) PreviousDownTimeX2 = new Date ().getTime (); else
+   {
+   var CurrentDownTimeX2 = new Date ().getTime ();
+	var ms_all = (CurrentDownTimeX2 - PreviousDownTimeX2);
+	$('#cl_all_timeout').text(ms_all + ' мс');
+	   
+if(ms_all < $("#sit_timeout").val()){
+var Dbl_cl_all = parseInt($('#Dbl_cl_all').text());
+ Dbl_cl_all++; $('#Dbl_cl_all').text(Dbl_cl_all);
+	   }
+   PreviousDownTimeX2 = CurrentDownTimeX2;
+   }
+	
+
+	
+	
+	
+// timer
+if ( oneclick == "1"){
+	
+	var now = new Date();
+	$('#console').val($.trim(' Тест запущен: ' + now + '\n Отчет сервиса CheckMouse'+ $('#console').val()));
+	
+	
+setInterval(updateDisplay, 1000); // every millisecond call updateDisplay
+function updateDisplay() {
+    var value = parseInt($('#timer').text(), 10);
+    value++;
+    $('#timer').text(value+" сек");
+}
+oneclick = "2";
+}	
+				 
+				 
+				 
+ });
+			 
+			 
+			 
+ 
+			 
+			 
+		 
+			 
+			 
+			 
+			 
+			 
+			 </script>
+		 
+		 
+		 
+		
+		
+		
+		<div class="row">
+		 
+			<div class="col">
+				
+				
+				<div class="form-group"><label for="sit_timeout">&nbsp;</label>
+		<br>
+		<a class="btn btn-light" role="button" href="?re">Сброс</a>
+		</div>
+		
+			</div>
+			
+			
+			
+			<div class="col-auto">
+				<label for="sit_timeout">Тайм-аут для Дабл клика:</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">ms</div>
+    </div>
+    <input type="text" class="form-control col-6"  id="sit_timeout" value="100" placeholder="По умолчанию: 100">
+  </div>
+			</div>
+		
+		</div>
+		<div class="form-group mt-2">
+   <label for="console" >Консоль:</label>
+    <textarea class="form-control" id="console" rows="3" style="font-size: 90%"></textarea>
+ 
+		
+		
+		<div class="mt-3 text-black-50">Версия 1.4 от 05.11.2021</div>
+	    </div>
+
+	
+		 
+		 
+	   
+		  
+		 
+		 
+		 
+	</div>
+          
+	 
+          
+          
+          
+	  </div>
+	  
+	  
+	    <div class="mb-4">
+		
+            
+            
+            <!-- Yandex.RTB R-A-562657-13 -->
+<div id="yandex_rtb_R-A-562657-13"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-562657-13',
+    blockId: 'R-A-562657-13'
+  })
+})</script>
+            
+            
+            
+            
+            
+            
+		 </div>
+	  
+	  
+ <small class="mt-4" style="color: #000000">
+		 "Двойной клик" (double click) — щелчок  кнопки мыши два раза без длинной паузы между нажатиями. Параметр этой паузы — Тайм-аут, условное значение, он установлен настройками вашей ОС, приложением или игрой. Для точного теста, вы можете установить свой Тайм-аут. <br>Стандартным значением Тайм-аута считается: 100 мс. 
+			</small>
+      
+      
+      
+      
+      
+	
+		
+		</div>
+		
+		</div>
+		
+</main>
+
+
+<div style="height: 200px;"></div>
+	<footer class="footer_new mb-2" style="margin-top:150px;">
+	<div style=" border-top: #FF9300 1px solid">
+		
+	
+	
+		<div class="container">
+  <div class="row mt-4">
+    
+    <
+		 
+		 
+		 
+		</div>
+				
+					
+					 
+				
+    
+					
+    </div>
+	  
+	  
+	  
+	
+	  
+	  
+  </div>
+</div>
+			
+		
+</div></footer>
+
+<noscript><div><img src="https://mc.yandex.ru/watch/86164925" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; var z = null;m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(23593846, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/23593846" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<script type='text/javascript' src='/checkmouse/style/title.js'></script>
+
+</body>
+</html>
