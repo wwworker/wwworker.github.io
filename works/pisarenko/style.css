@@ -104,3 +104,13 @@ iframe {border: 0;}
 .topmenu li:hover .submenu {
   display: block;
 }
+main a {
+  font-size: 1.7em; 
+}
+.fix {
+  display: flex;
+  justify-content: center;
+}
+button {
+  font-size: 1.5em;
+}

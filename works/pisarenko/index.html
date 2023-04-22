@@ -9,18 +9,22 @@
         function changeBear(bear) {
       imgtochange = document.getElementById("sad");
       if (bear == "dog") {
-        imgtochange.src = "медведи/встреча.gif";
-        imgtochange.style.top = "46px";
-        imgtochange.style.left = "105px";
-        imgtochange.style.width = "195px";
-        imgtochange.style.height ="205px";
+        imgtochange.src = "медведи/акрабат.gif";
+        imgtochange.style.top = "300px";
+        imgtochange.style.left = "180px";
+        imgtochange.style.width = "300px";
       }
-      if (dress == "sad") {
+      if (bear == "sad") {
         imgtochange.src = "медведи/самокат.gif";
-        imgtochange.style.top = "63px";
-        imgtochange.style.left = "107px";
-        imgtochange.style.width = "186px";
-        imgtochange.style.height = "200px";
+        imgtochange.style.top = "260px";
+        imgtochange.style.left = "190px";
+        imgtochange.style.width = "160px";
+      }
+      if (bear == "sri") {
+        imgtochange.src = "медведи/лыжи.png";
+        imgtochange.style.top = "290px";
+        imgtochange.style.left = "200px";
+        imgtochange.style.width = "150px";
       }
     }
     </script>
@@ -35,6 +39,11 @@ main #gar #sad {
   left: 98px;
   top: 65px;
 }
+#sad {
+  top: 260px;
+  left: 190px;
+  width: 160px;
+}
     </style>
 </head>
 <body>
@@ -46,10 +55,10 @@ main #gar #sad {
             <ul class="anchors submenu">
                 <li><a href="#book">Медвежата</a></li>
                 <li><a href="#glass">Белые медведи</a></li>
-                <li><a href="#soviet">Медведи разные</a></li> 
-                <li><a href="#berry">Цирк</a></li>  
+                <li><a href="#soviet">Медведи разные</a></li>
+                <li><a href="#berry">Цирк приехал</a></li>
             </ul>
-        </li>    
+        </li>
         <li><a href="Мультики.html">🃏мультики</a>
             <ul class="anchors submenu">
                 <li><a href="Мультики.html#glass">Первый в мире</a></li>
@@ -96,14 +105,15 @@ main #gar #sad {
         <img src="медведи/гималайский.jpg" width="500" alt=""><br><br>
         <p class="big">Это самые крупные из современных наземных хищных зверей. Белые медведи достигают длины тела 3 метра при массе до 725 и даже 890 кг; малайский медведь — самый мелкий представитель медвежьих: в длину он не превышает 1,5 метров, высота в холке составляет всего 50–70 см; масса – 27–65 кг. Самцы на 10–20 % крупнее самок.</p>
         <img src="медведи/медведи разные.jpg" alt="">
-    <h1 id="berry">Цирк</h1>
+    <h1 id="berry">🎪Цирк приехал</h1>
     <div class="buttons">
-        <button onclick="changeBear('dog')" style="background: none!important; border: none; padding: 0!important; margin-right: 35px">Cмени одежду на зеленое(платье)</button>
-        <button onclick="changeBear('sad')" style="background: none!important; border: none; padding: 0!important; margin-right: 35px">Cмени одежду на голубое(платье)</button>
+        <button onclick="changeBear('dog')" style="background: none!important; border: none; padding: 0!important; margin-right: 35px; color: grey;"><img src="медведи/панда.png" width="40" alt="">Замени медведя на панду</button>
+        <button onclick="changeBear('sad')" style="background: none!important; border: none; padding: 0!important; margin-right: 35px; color:rgb(90, 64, 28)"><img src="медведи/морда.png" width="40" alt="">Замени медведя бурого</button>
+        <button onclick="changeBear('sri')" style="background: none!important; border: none; padding: 0!important; margin-right: 35px; color: ghostwhite;"><img src="медведи/бм.png" width="40" alt="">Замени медведя на белого</button>
     <div id="gar">
-        <img src="медведи/цирк.jpg" width="400" alt="">
-        <img src="медведи/самокат.gif" id="sad" alt="">
-    </div>       
+        <img src="медведи/цирк.jpg" width="600" alt="">
+        <img src="медведи/самокат.gif" id="sad" style="top: 260px; left: 190px; width: 160px;" alt="">
+    </div>
 <br>
 </main>
 <footer>
