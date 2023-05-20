@@ -41,15 +41,12 @@ h1 {
 }
 .feature-kitten {
   padding-top: 60px;
-  background-image: url("img/bottle.svg");
 }
 .feature-cat {
   padding-top: 60px;
-  background-image: url("img/cat.svg");
 }
 .feature-train {
   padding-top: 60px;
-  background-image: url("img/whistle.svg");
 }
 .skills-list {
   padding: 0;
