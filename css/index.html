@@ -13,8 +13,10 @@
 <nav class="menu">
   <ul>
     <li><a href="../">Web-дизайн</a></li>
+    <li><a href="#selectors">Виды селекторов</a></li>
     <li><a href="#default">Стили по умолчанию</a></li>
     <li><a href="#blockmodel">Блочная модель</a></li>
+    <li><a href="#flexbox">Flexbox</a></li>
   </ul>
 </nav>
 <h1>Оформление Web-страниц</h1>
@@ -32,11 +34,11 @@
 <h2>Способы использования CSS в HTML</h2>
 <ol>
   <li>внешние стили, подключаются тегом &lt;link&gt; в голове документа, т.е. <b>внутри</b> тега &lt;head&gt;:
-<pre><code><b>&lt;link rel="stylesheet" href="style.css"></b></code></pre>
+<pre><code><b>&lt;link rel="stylesheet" href="style.css"&gt;</b></code></pre>
   </li>
-  <li>внутренние стили, внутри тега &lt;style> (a &lt;style> – внутри тега &lt;head> документа html)</li>
+  <li>внутренние стили, внутри тега &lt;style&gt; (a &lt;style&gt; – внутри тега &lt;head&gt; документа html)</li>
   <li>встроенные стили, как значение атрибута style:
-<pre><code>&lt;p style="display:none"></code></pre>
+<pre><code>&lt;p style="display:none"&gt;</code></pre>
   </li>
 </ol>
 
@@ -56,7 +58,7 @@
   <li><b>класс (class)</b>: выбирает все элементы (теги) с указанным классом (в атрибуте class);</li>
   <li><b>идентификатор (id)</b>: выбирает элемент (тег) с указанным уникальным идентификатором (атрибут id);</li>
   <li><b>вложенные селекторы</b>, запись через пробел;</li>
-  <li><b>дочерний селектор</b>, должен располагаться непосредственно внутри родительского элемента. Записывается через <b>></b>.
+  <li><b>дочерний селектор</b>, должен располагаться непосредственно внутри родительского элемента. Записывается через <b>&gt;</b>.
   Также используются <b>дочерние псевдоклассы</b> :first-child, :last-child,
   :only-child, :nth-child (odd), :nth-child (even) и др.</li>
   <li><b>Соседние селекторы</b>: i <b>+</b> b. Стиль применяется к тегу b, соседнему по оотношению к i.</li>
@@ -65,7 +67,7 @@
   <li><b>[атрибут="значение"]</b> устанавливает стиль для элемента в том случае, если задано определённое значение указанного атрибута. Пример: a[target="_blank"]</li>
   <li><b>[атрибут~="значение"]</b> Стиль применяется в том случае, если у атрибута имеется указанное значение или оно входит в список значений, разделяемых пробелом. Пример: [class~="block"]</li>
   <li><b>[атрибут|="значение"]</b> Стиль применяется к элементам, у которых атрибут начинается с указанного значения или с фрагмента значения, после которого идет дефис.
-  Пример: div[class|="block"] применится к &lt;div class="<b>block-menu-item</b>"></li>
+  Пример: div[class|="block"] применится к &lt;div class="<b>block-menu-item</b>"&gt;</li>
   <li><b>[атрибут^="значение"]</b> стиль применяются ко всем элементам, у которых значение атрибута начинается с указанного текста.  Пример: a[href^="http://"]</li>
   <li><b>[атрибут$="значение"]</b> стиль применяются ко всем элементам, у которых значение атрибута оканчивается указанным текстом. Пример: a[href$=".ru"]</li>
   <li><b>[атрибут*="значение"]</b> определяет, что значение атрибута содержит указанный текст. Пример: [href*="000webhost"]</li>
@@ -89,6 +91,7 @@
   Restore Browser/Spec default CSS styles. Also includes the default CSS styles</li>
 <li><b><a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener noreferrer">Normalize.css</a></b>
   заставляет браузеры отображать все элементы более последовательно и в соответствии с современными стандартами.</li>
+<li><b><a href="https://getbootstrap.com/docs/5.3/content/reboot/" target="_blank" rel="noopener noreferrer">Reboot</a></b>, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.</li>
 <li><b><a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank" rel="noopener noreferrer">Reset CSS</a></b></li>
 <li><a href="https://elad.medium.com/how-does-css-work-92fe7116916d" target="_blank" rel="noopener noreferrer">How Does CSS Work?</a>
   <a href="https://elad.medium.com/normalize-css-or-css-reset-9d75175c5d1e" target="_blank" rel="noopener noreferrer">Normalize CSS or CSS Reset?!</a>
@@ -168,7 +171,7 @@
 <h2>Схлопывание отступов</h2>
 <p>У блочных элементов, расположенных рядом друг с другом по вертикали, отступы не суммируются, а объединяются между собой. Само схлопывание действует на два и более блока (один может быть вложен внутрь другого) с отступами сверху или снизу, при этом примыкающие отступы комбинируются в один.
 <b>Этот эффект работает только для блоков, у которых не заданы поля и границы. Для отступов слева и справа схлопывание никогда не применяется.</b></p>
-<p><b>Зачем?</b> Для корректного отображения текста: расстояние между абзацами (тег &lt;p>) без схлопывания увеличится в два раза, тогда как верхний отступ первого абзаца и нижний отступ последнего абзаца останутся неизменными. Схлопывание гарантирует, что расстояние в абзацах везде будет одинаковым.</p>
+<p><b>Зачем?</b> Для корректного отображения текста: расстояние между абзацами (тег &lt;p&gt;) без схлопывания увеличится в два раза, тогда как верхний отступ первого абзаца и нижний отступ последнего абзаца останутся неизменными. Схлопывание гарантирует, что расстояние в абзацах везде будет одинаковым.</p>
 <p><b><a
 href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing"
 target="_blank" rel="noopener noreferrer">Схлопывание внешних отступов</a>: полное описание и примеры</b></p>
@@ -219,7 +222,7 @@ target="_blank" rel="noopener noreferrer">Схлопывание внешних 
   rel="noopener noreferrer">выравнивание в css</a>
 </p>
 
-<h2><a href="https://www.w3schools.com/csS/css3_flexbox.asp" target="_blank" rel="noopener noreferrer">Flexbox</a></h2>
+<h2 id="flexbox"><a href="https://www.w3schools.com/csS/css3_flexbox.asp" target="_blank" rel="noopener noreferrer">Flexbox</a></h2>
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank" rel="noopener noreferrer">Basic concepts of flexbox</a>
 
 <h2>Остальное</h2>
