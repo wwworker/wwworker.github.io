@@ -1,0 +1,21 @@
+body { background-image:url("code/fon.png");
+    background-size: cover;
+    }
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2em;}
+a {
+  padding-right: 2em;
+  font-size: 2em;
+}
+footer {
+    height: 300px;
+}
+div {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    font-size: 2em;
+
+}
