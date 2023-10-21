@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {display: flex;
+            background-color: rgba(255, 255, 255, 0);
+            width: fit-content;
+            width: auto;
+            height: auto;
+            overflow: auto;
+        }
+        body {
+            background-image: url(back.jpg);
+        }
+        ul.menu {
+            display: flex;
+            background-color: rgb(176, 79, 196);
+            list-style: none;
+            padding: 1em 1em;
+        }
+        ul.side {
+            display: flex;
+            list-style: none;
+
+        }
+        li {
+            margin-right: 2em;
+        }
+        div.all {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 2em 1em;
+            padding-top: 0.5em;
+            padding-bottom: 5em;
+        }
+        .item{
+            border: rgb(255, 0, 242) solid;
+            width: 150px;
+            margin: 5px;
+        }
+        a{
+            text-decoration: none;
+        }
+        h1{
+            font-size: 3ch;
+            color: rgb(0, 0, 0);
+        }
+        h1.title {
+            min-height: 90px;
+        }
+        h2{
+            font-size: 3ch;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+  <div class="all">
+    <h1>Уютный уголок</h1> 
+    <ul class="side">
+        <li>Корзина</li> 
+        <li>Избранное</li>
+    </ul>
+  </div>
+  <ul class="menu">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="vines.html">Лианы</a></li>
+    <li><a href="garland.html">Гирлянды</a></li>
+    <li><a href="decor.html">Декор</a></li>
+    <li><a href="food.html">Вкусняшки</a></li>
+  </ul>
+
+<div class="container">
+    <div class="item"><a href="vines1.html">
+        <img src="./vines1.jpg" width="150" height="200" alt="">
+        <h1 class="title">лианы (набор) 5 шт.</h1>
+        <h2>100 рублей</h2>
+    </a>
+    </div>
+
+    <div class="item"><a href="vines2.html">
+        <img src="./vines2.jpg" width="150" height="200" alt="">
+        <h1 class="title">лианы (набор) с подсветкой</h1>
+        <h2>200 рублей</h2>
+        </a>
+    </div>
+
+    <div class="item"><a href="vines3.html">
+        <img src="./vines3.jpg" width="150" height="200" alt="">
+        <h1 class="title">лианы (набор) 10 шт</h1>
+        <h2> 200 рублей</h2>
+        </a>
+    </div>
+    <div class="item"><a href="vines4.html">
+        <img src="./vines4.jpg" width="150" height="200" alt="">
+        <h1 class="title">лианы с клипсами </h1>
+        <h2>400 рублей</h2>
+    </a>
+    </div>
+
+</div>
+
+</body>
+</html>
