@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <title>Инвестиции</title>
+    <style>
+        h1 {
+            justify-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            font-size: 2em;
+            text-align: center;
+        }
+        body {
+            background-color: cyan;
+        }
+        p {
+            color: saddlebrown;
+            font-size: 2em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h2 {
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+        }
+    </style>
+    <Script>let price = 10;
+        let balance1 = 500;
+        let scambot = 0;
+        function randomaisez(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        function balance11()
+        {
+            if (balance1 < 0){
+                document.getElementById("message").innerHTML = "РЈ РІР°СЃ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ СЃСЂРµРґСЃС‚РІ";
+            }
+            else {
+                document.getElementById("balance").innerHTML = balance1 + "$";
+            }
+        }
+        function priceChanged(){
+            if (price < 0.1)
+            {
+                fufuch = randomaisez(0.4 , 5);
+                price += fufuch;
+            }
+            else
+            {
+                giger = randomaisez(4.1, 4.4);
+                fufuch2 = randomaisez(-3.3, giger);
+                price += fufuch2;
+            }
+            price = Math.max(0.0001, price);
+            price = Math.round(price * 10000)/ 10000;
+            document.getElementById("price").innerHTML = price + "$";
+        }
+        function buy(){
+            if (balance1 > 0 && balance1 > price + 5)
+            {
+                balance1 = balance1 - price - 5;
+                balance1 = Math.round(balance1 * 10000)/ 10000;
+                scambot += 1;
+                document.getElementById("coins").innerHTML = scambot + " VLCcoins";
+                balance11();
+            }
+            else
+                document.getElementById("message").innerHTML = "РЈ РІР°СЃ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ СЃСЂРµРґСЃС‚РІ";
+        }
+        function sell()
+        {
+            if (scambot >= 1)
+            {
+                scambot -= 1;
+                balance1 += price;
+                balance1 = Math.round(balance1 * 10000)/ 10000;
+                document.getElementById("coins").innerHTML = scambot + " VLCcoins";
+                balance11();
+            }
+            else
+            document.getElementById("message").innerHTML = "ARTEMPRICE";
+        
+        }
+        function saveBalance()
+        {
+        
+        }
+        
+        
+        
+        window.onload = function () {
+            balance11()
+            priceChanged()
+            var dps = [{x: 1, y: price}, {x: 2, y: price}, {x: 3, y: price}, {x: 4, y: price}, {x: 5, y: price},{x: 6, y: price}, {x: 7, y: price}, {x: 8, y: price}, {x: 9, y: price}, {x: 10, y: price}, {x: 11, y: price}];   //dat  aPoints. 
+        
+            var chart = new CanvasJS.Chart("chartContainer",{
+                title :{
+                    text: "ARTEMPRICE"
+                },
+                axisX: {						
+                    title: "ARTEMPRICE"
+                },
+                axisY: {						
+                    title: "ARTEMPRICE"
+                },
+                data: [{
+                    type: "line",
+                    dataPoints : dps
+                }]
+            });
+        
+            chart.render();
+            var xVal = dps.length + 1;
+            var updateInterval = 1200;
+        
+            var updateChart = function () {
+                
+                
+                dps.push({x: xVal,y: price});
+                
+                xVal++;
+                if (dps.length >  10 )
+                {
+                    dps.shift();				
+                }
+                priceChanged();
+                chart.render();
+        
+          // update chart after specified time. 
+        
+        };
+        
+        setInterval(function(){updateChart()}, updateInterval); 
+        }</Script>
+</head>
+<body>
+    <h1>Инвестиции</h1>
+    <div class="logo">
+    </div>
+    <div class="balance">
+        <h3>Your Balance</h3>
+        <span id="balance"></span> <br>
+        <button onclick="saveBalance()">Сохранить баланс</button>
+    </div>
+    <div class="price">
+        <h3>VladCrypto Coin price:</h3>
+        <span id="price"></span> <br>
+        <button onclick="buy()" id="buy">Buy VLCcoin</button>
+        <button onclick="sell()" id="sell">Sell VLCcoin</button>
+    </div>
+    <h3>You have: </h3>
+    <span id="coins">0 VLCcoins</span>
+    <h3>Message: </h3>
+    <span id="message"></span>
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+	</div>
+    <p>Инвести́ции — денежные средства, ценные бумаги, иное имущество, в том числе имущественные права, иные права, имеющие денежную оценку, вкладываемые в объекты предпринимательской и (или) иной деятельности в целях получения прибыли и (или) достижения иного полезного эффекта. К. Р. Макконнелл и С. Л. Брю в своей книге «Экономикс» определили инвестиции как затраты на изготовление и накопление средств производства, а также увеличение материальных запасов.
+
+        Инвестиционная деятельность — вложение инвестиций и осуществление практических действий в целях получения прибыли и (или) достижения иного полезного эффекта.
+        
+        С позиции монетарной теории денег, средства можно направить на потребление или сбережение. Простое сбережение изымает средства из оборота и создаёт предпосылки для кризисов. Инвестирование же вовлекает сбережения в оборот. Оно может происходить напрямую или косвенно (размещение временно свободных средств на депозит в банк, который уже сам инвестирует).</p>
+        <img src="./invest.jpg" width="900" alt="">
+        <img src="./invest2.jpg" width="900" alt="">
+        <h2>Для чего нам нужны инвестиции???</h2>
+        <p>Инвестиции — это вложение денег с целью получения прибыли в будущем. Их главная задача — приумножить капитал. Для бизнеса инвестирование — это способ закрыть финансовые потребности. Инвесторы могут помогать не только деньгами, но и знаниями, связями и опытом!!!</p>
+        <h2>Видео о инвестициях</h2>
+</body>
+</html>
