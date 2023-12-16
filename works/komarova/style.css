@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+h1 {
+    font-size: 4em;
+    font-family: 'Jura', sans-serif;
+font-family: 'Lobster', cursive;
+}
+p {
+    font-size: 5em;
+    font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+}
+ul {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+}
+    h1 {
+        font-size: 5em;
+        font-family: 'Jura', sans-serif;
+font-family: 'Lobster', cursive;
+    }
+    body {
+        background-color: rgb(240, 109, 109);
+        margin: 0;
+    }
+    .goose {
+        background-color: rgb(253, 188, 188);
+        margin: 0 auto;
+        width: 80%;
+        padding: 40px;
+        padding-top: 40px; 
+    } 
+h1 {
+    font-size: 4em;
+    font-family: 'Jura', sans-serif;
+font-family: 'Lobster', cursive;
+}
+p {
+    font-size: 2em;
+    font-family: 'Ubuntu', sans-serif;
+}
+ul {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+}
+    h1,h2,h3 {
+        font-size: 2em;
+        font-family: 'Jura', sans-serif;
+font-family: 'Lobster', cursive;
+    }
+.menu {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.menu a {
+    padding-right: 20px;
+    font-size: 1.5em;
+}
