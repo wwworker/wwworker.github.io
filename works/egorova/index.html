@@ -6,8 +6,11 @@
     <title>Document</title>
     <style>
         header h1 {
-            border: 1px solid red;
+            min-width: 40%;
+            border: 1px solid black;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         body{
             padding-top: 20px;
@@ -15,27 +18,29 @@
         body, html {
             margin: 0%;
             padding: 0%;
-            padding-top: 5px;
+            padding-top: 10px;
         }
         header {
-            border: 1px solid red;
+            border: 1px solid black;
             background-color: #919191;
             display: flex;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             width: 100%;
         }
         ul#menu {
-            border: 1px solid red;
+            border: 1px solid black;
             display: flex;
             list-style: none;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             width: 100%;
             justify-content: flex-end;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         ul li {
-            margin-right: 10px;
-            border: 1px solid red;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         section {
             display: flex;
@@ -44,10 +49,20 @@
         div.left {
             max-width: 80%;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        div.right {
+            max-width: 80%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 140px;
         }
         p, li.menu {
             font-size: 2em;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 40px;
         }
         h1, h2{
             font-size: 3em;
@@ -55,9 +70,24 @@
         }
         p.menu {
             font-size: 20px ;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         li.menu {
             margin-bottom: 35px;
+        }
+        .ds {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .cf {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .vasya {
+            padding: 0;
         }
 
     </style>
@@ -85,15 +115,19 @@
             <p class="menu">первое издание 2009г.</p>
         </div>
     </section>
-    <img src="первая книга.png" alt="">
-    <img src="второе издание.png" alt="">
-    <img src="второре издание 3 .png" alt="">
+    <div class="ds">
+        <img src="первая книга.png" alt="">
+        <img src="второе издание.png" alt="">
+        <img src="второре издание 3.png" alt="">
+    </div>
     <p class="menu">второе издание 2014 г.</p>
     <ul>
         <li class="menu">Название романа было изменено перед публикацией:
             Книга называлась «Дом, который…». Тоже, конечно, не ахти что, но старое название было говорящим и ассоциировалось с «Домом, который построил Джек». А новое ни с чем не ассоциируется. В издательстве Livebook объяснили, что нынешнее название предложил какой-то очень известный поэт — уж не знаю, кто именно.</li>
     </ul>
-    <img src="4 издание.png" alt="">
+    <div class="cf">
+        <img src="4 издание.png" alt="">
+    </div>
     <p class="menu">четвёртое издание 2019 г.</p>
     <p>* Издания:</p>
     <ul>
