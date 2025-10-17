@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блок с рамкой</title>
+  <style>
+    body {
+      margin: 0; /* Убираем отступы по умолчанию */
+      padding: 0;
+      background-color: red;
+    }
+    
+    .block {
+      min-height: calc(100vh - 40px); /* Высота равна высоте окна */
+      box-sizing: border-box; /* Включаем border в высоту */
+      border: 5px solid black; /* Рамка высотой 5px */
+      margin: 10px auto;
+      padding: 10px;
+      width: 75%; /* Ширина на весь экран, можно изменить */
+      background-color: green; /* Для визуализации, опционально */
+    }
+  </style>
+</head>
+<body>
+  <div class="block">
+    <h1>Желтые рыббы плывут на восток</h1>
+    <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil commodi dolore quae modi exercitationem aliquid tempora nisi ex veniam. Debitis labore minus nisi accusamus tenetur! Molestiae dolorem, obcaecati odit dignissimos quisquam incidunt consequatur id, doloremque.
+    </p>
+    <img src="https://masterpiecer-images.s3.yandex.net/5d79e6b7aba311ee9e3256e543f8144e:upscaled" width="230" alt="">
+    <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quo ipsam tempora voluptatem maiores architecto fugiat nesciunt veniam fuga libero itaque quibusdam sint est, illum consectetur odio accusantium nulla consequatur. Modi ab, suscipit sequi dolores quasi minima officiis
+    </p>
+</div>
+</body>
+</html>
